@@ -1,28 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<Header/>
-	<main>
-		<h1 >Beauty Salon</h1>
-	</main>
+  <Header />
+  <main>
+    <section>
+      <div>
+        <h1>Beauty Salon</h1>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+            corrupti illo, ducimus porro tempore earum excepturi cum eos sit ea?
+            Eligendi culpa eaque laboriosam harum ex sed quisquam architecto
+            aliquid?
+          </p>
+        </div>
+		<div>
+			<button >Book Now</button>
+			<button>Vew services</button>
+		</div>
+      </div>
+
+    </section>
+  </main>
 </Layout>
 
 <style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: black;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  button{
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #111827;
+	color: #f1f1f1;
+  }
+  button:hover{
+	background-color: rgba(0, 0,0, 0.1);
 	
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: black;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	
-	
+  }
 </style>
