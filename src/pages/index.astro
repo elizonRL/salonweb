@@ -6,22 +6,32 @@ import Header from "../components/Header.astro";
 <Layout title="Welcome to Astro.">
   <Header />
   <main>
-    <section>
-      <div>
-        <h1>Beauty Salon</h1>
+    <section class="main">
+      <aside class="hero">
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
-            corrupti illo, ducimus porro tempore earum excepturi cum eos sit ea?
-            Eligendi culpa eaque laboriosam harum ex sed quisquam architecto
-            aliquid?
-          </p>
+          <h1>Bella Beauty Salon</h1>
+          <div>
+            <p>
+              Discover the ultimate pampering experience at our premier beauty
+              salon. Indulge in a wide range of luxurious services tailored to
+              make you feel beautiful and confident.
+            </p>
+          </div>
+          <div>
+            <button>Book Now</button>
+            <button>Vew services</button>
+          </div>
         </div>
-        <div>
-          <button>Book Now</button>
-          <button>Vew services</button>
-        </div>
-      </div>
+      </aside>
+      <aside class="galery">
+        <img
+          src="/img/beauty-salon-front-state.webp"
+          alt="Front of salon"
+          class="top-img"
+        />
+        <img src="/img/beauty-salon-black.webp" alt="Salon black" />
+        <img src="/img/beauty-salon-pink.webp" alt="Salon pink" />
+      </aside>
     </section>
   </main>
 </Layout>
@@ -47,5 +57,42 @@ import Header from "../components/Header.astro";
   button:hover {
     background-color: rgba(0, 0, 0, 0.1);
     color: #111827;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .hero{
+    min-width: fit-content;
+  }
+  .hero p{
+    color: #aaa8a8;
+    font-weight: 100;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border: solid 1px #ccc;
+    border-radius: 5%;
+  }
+  .galery {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: auto, auto;
+    gap: 20px;
+  }
+
+  .top-img {
+    grid-row: 1; /* Occupies the first row */
+    grid-column: span 2; /* Spans across both columns */
+    height: 300px; /* Adjust height as needed */
+    width: 300px;
+    object-fit: cover; /* Ensure image covers the entire area */
+  }
+  h1 {
+    font-size: 42px;
   }
 </style>
