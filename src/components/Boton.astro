@@ -1,0 +1,20 @@
+---
+const { chaild } = Astro.props;
+---
+
+<section>
+  <button>
+    <slot />
+  </button>
+</section>
+
+<style>
+  button {
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #111827;
+    color: #f1f1f1;
+    transition: all ease 0.3;
+  }
+</style>
