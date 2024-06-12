@@ -1,9 +1,15 @@
 ---
 const { chaild } = Astro.props;
----
 
+---
+<script>
+    const handelClick = ()=>{
+    alert('hola ')
+}
+document.getElementById('button').addEventListener('click', handelClick)
+</script>
 <section>
-  <button>
+  <button id="button">
     <slot />
   </button>
 </section>
