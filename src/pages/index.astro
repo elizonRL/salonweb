@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Boton from "../components/Boton.astro";
+import Boton from "../components/Boton.jsx";
+
 ---
 
 <Layout title="Bella Beauty Salon.">
@@ -19,8 +20,12 @@ import Boton from "../components/Boton.astro";
             </p>
           </div>
           <div class="butones">
-            <Boton> Book Now </Boton>
-            <Boton> View Services </Boton>
+            <Boton name="Book" client:load >
+              Book now
+            </Boton>
+            <Boton name="servise" client:load >
+              Servises
+            </Boton>
           </div>
         </div>
       </aside>
@@ -67,6 +72,7 @@ import Boton from "../components/Boton.astro";
     color: #585757;
     font-size: 16px;
     font-weight: 200;
+    text-wrap: wrap;
   }
   img {
     width: 200px;
@@ -77,6 +83,7 @@ import Boton from "../components/Boton.astro";
   }
   .galery {
     display: grid;
+    text-align: center;
     grid-template-columns: 1fr, 1fr;
     grid-template-rows: auto, auto;
     gap: 15px;
