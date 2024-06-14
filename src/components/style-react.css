@@ -1,5 +1,21 @@
-.buton{
-    padding: 10px;
-    margin: 10px;
-    background-color: black;
+.div-elemento-a  a {
+    padding: 5px 32px;
+   font-size: 14px;
+  }
+.buton {
+  border-radius: 5px;
+  background-color: #111827;
+  color: #f1f1f1;
+  transition: all ease 0.3;
+}
+.buton-white {
+  background-color: #ffffff;
+  border: solid 1px #e6e6e6;
+  border-radius: 5px;
+}
+
+.div-elemento-a a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+
 }
