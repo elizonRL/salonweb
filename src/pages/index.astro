@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Boton from "../components/Boton.jsx";
-
 ---
 
 <Layout title="Bella Beauty Salon.">
@@ -20,10 +19,10 @@ import Boton from "../components/Boton.jsx";
             </p>
           </div>
           <div class="butones">
-            <Boton name="Book" className={'buton'} client:load >
+            <Boton name="Book" className={"buton"} client:load>
               Book now
             </Boton>
-            <Boton name="servise" className={'buton-white'} client:load >
+            <Boton name="servise" className={"buton-white"} client:load>
               Servises
             </Boton>
           </div>
@@ -40,7 +39,15 @@ import Boton from "../components/Boton.jsx";
       </aside>
     </section>
     <section class="services">
-      
+      <aside>
+        <div class="header">
+          <h2>Indulge in Luxury</h2>
+          <p>
+            Explore our wide range of premium beauty services designed to help
+            you look and feel your best.
+          </p>
+        </div>
+      </aside>
     </section>
   </main>
 </Layout>
@@ -69,7 +76,7 @@ import Boton from "../components/Boton.jsx";
     min-width: fit-content;
   }
   .hero p {
-    color: #585757;
+    color: #6B7280;
     font-size: 16px;
     font-weight: 200;
     text-wrap: wrap;
@@ -102,5 +109,26 @@ import Boton from "../components/Boton.jsx";
   h1 {
     font-size: 42px;
   }
-  
+  .services{
+    display: flex;
+    width: 100% ;
+    background-color: #F3F4F6;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .header h2 {
+    font-size: 42px;
+  }
+  .header small {
+    text-align: end;
+    font-size: 16px;
+  }
+  .header p{
+    color: #6B7280;
+    font-weight: 300;
+    text-wrap: wrap;
+  }
 </style>
