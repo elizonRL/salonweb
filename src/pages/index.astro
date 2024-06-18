@@ -47,6 +47,23 @@ import Boton from "../components/Boton.jsx";
             you look and feel your best.
           </p>
         </div>
+        <div class="body-seccion"> 
+          <div class="services-details">
+            <div>
+              <h3>Hair Services</h3>
+              <span>Haircuts, coloring, styling, and more.</span>
+              <div class="footer-details">
+                <span>From $45</span>
+                <Boton name="Book Now" className={"buton"} client:load>
+                  Book Now
+                </Boton>
+              </div>
+            </div>
+          </div>
+          <div class="imagen-corte">
+            <img src="/img/salon-corte.webp" alt="salonera haciendo corte">
+          </div>
+        </div>
       </aside>
     </section>
   </main>
@@ -70,7 +87,9 @@ import Boton from "../components/Boton.jsx";
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 20px;
+    padding: 48px 0;
   }
   .hero {
     min-width: fit-content;
@@ -111,24 +130,65 @@ import Boton from "../components/Boton.jsx";
   }
   .services{
     display: flex;
-    width: 100% ;
+    justify-content: center;
+    align-items: center;
     background-color: #F3F4F6;
+    width: 100%;
+    padding: 48px 0;
   }
   .header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    margin-top: 1rem;
   }
   .header h2 {
-    font-size: 42px;
+    font-size: 48px;
+    font-weight: 200;
+    margin: 8px 0 0;
+    color: #09090b;
+   
   }
   .header small {
     text-align: end;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
   }
   .header p{
     color: #6B7280;
     font-weight: 300;
+    font-size: 16px;
     text-wrap: wrap;
+    margin: 8px 0 0;
   }
+  .body-seccion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 48px 0;
+  }
+  .body-seccion h3{
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0;
+  }
+  .body-seccion span{
+    font-weight: 100;
+    font-size: 16px;
+  }
+  .services-details{
+
+  }
+  .footer-details{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .imagen-corte img{
+    width: 300px;
+    height: 300px;
+  }
+
 </style>
