@@ -1,0 +1,20 @@
+---
+const { bgClass } = Astro.props;
+---
+<section class={bgClass}>
+  <slot />
+</section>
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    gap: 20px;
+    padding: 12rem 0;
+  }
+  .bg-color-gray {
+    background-color: #f3f4f6;
+  }
+</style>

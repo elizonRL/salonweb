@@ -2,12 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Boton from "../components/Boton.jsx";
+import Sections from "../components/Sections.astro";
+import Services from "../components/Services.astro";
 ---
 
 <Layout title="Bella Beauty Salon.">
   <Header />
   <main>
-    <section class="main">
+    <Sections >
       <aside class="hero">
         <div>
           <h1>Bella Beauty Salon</h1>
@@ -37,43 +39,33 @@ import Boton from "../components/Boton.jsx";
         <img src="/img/beauty-salon-black.webp" alt="Salon black" />
         <img src="/img/beauty-salon-pink.webp" alt="Salon pink" />
       </aside>
-    </section>
-    <section class="services">
-      <aside>
-        <div class="header">
-          <h2>Indulge in Luxury</h2>
-          <p>
-            Explore our wide range of premium beauty services designed to help
-            you look and feel your best.
-          </p>
-        </div>
-        <div class="body-seccion"> 
-          <div class="services-details">
-            <div>
-              <h3>Hair Services</h3>
-              <span>Haircuts, coloring, styling, and more.</span>
-              <div class="footer-details">
-                <span>From $45</span>
-                <Boton name="Book Now" className={"buton"} client:load>
-                  Book Now
-                </Boton>
-              </div>
-            </div>
-          </div>
-          <div class="imagen-corte">
-            <img src="/img/salon-corte.webp" alt="salonera haciendo corte">
-          </div>
-        </div>
-      </aside>
-    </section>
+    </Sections>
   </main>
+  <Sections bgClass="bg-color-gray">
+    <aside>
+      <div class="header">
+        <h2>Indulge in Luxury</h2>
+        <p>
+          Explore our wide range of premium beauty services designed to help
+          you look and feel your best.
+        </p>
+      </div>
+      <div class="body-seccion"> 
+        <div class="services-details">
+          <Services/>
+        </div>
+        <div class="imagen-corte">
+          <img src="/img/salon-corte.webp" alt="salonera haciendo corte">
+        </div>
+      </div>
+    </aside>
+  </Sections>
 </Layout>
 
 <style>
   main {
     margin: auto;
     padding: 1rem;
-    
     max-width: calc(100% - 2rem);
     color: black;
     font-size: 20px;
@@ -93,9 +85,7 @@ import Boton from "../components/Boton.jsx";
     gap: 20px;
     padding: 12rem 0;
   }
-  .hero {
-    min-width: fit-content;
-  }
+  
   .hero p {
     color: #6B7280;
     font-size: 20px;
@@ -128,14 +118,6 @@ import Boton from "../components/Boton.jsx";
     font-size: 60px;
     font-weight: 200;
     margin: 0;
-  }
-  .services{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F3F4F6;
-    width: 100%;
-    padding: 12rem 0;
   }
   .header {
     display: flex;
@@ -172,20 +154,7 @@ import Boton from "../components/Boton.jsx";
     padding: 48px 0;
    
   }
-  .body-seccion h3{
-    font-size: 20px;
-    font-weight: 200;
-    margin: 0;
-  }
-  .body-seccion span{
-    font-weight: 100;
-    font-size: 16px;
-  }
-  .footer-details{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+  
   .imagen-corte img{
     width: 500px;
     height: 500px;
