@@ -9,7 +9,7 @@ import Services from "../components/Services.astro";
 <Layout title="Bella Beauty Salon.">
   <Header />
   <main>
-    <Sections >
+    <Sections>
       <aside class="hero">
         <div>
           <h1>Bella Beauty Salon</h1>
@@ -46,17 +46,41 @@ import Services from "../components/Services.astro";
       <div class="header">
         <h2>Indulge in Luxury</h2>
         <p>
-          Explore our wide range of premium beauty services designed to help
-          you look and feel your best.
+          Explore our wide range of premium beauty services designed to help you
+          look and feel your best.
         </p>
       </div>
-      <div class="body-seccion"> 
+      <div class="body-seccion">
         <div class="services-details">
-          <Services/>
+          <Services />
         </div>
         <div class="imagen-corte">
-          <img src="/img/salon-corte.webp" alt="salonera haciendo corte">
+          <img src="/img/salon-corte.webp" alt="salonera haciendo corte" />
         </div>
+      </div>
+    </aside>
+  </Sections>
+  <Sections>
+    <aside class="aside-about">
+      <h2>Elevating Beauty, Empowering Confidence</h2>
+      <p>
+        At Bella Beauty Salon, we are passionate about helping our clients look
+        and feel their absolute best. Our team of skilled professionals is
+        dedicated to providing personalized, high-quality services in a
+        luxurious and welcoming environment.
+      </p>
+      <div class="butones">
+        <Boton name="Book" className={"buton"} client:load>
+          Book an appointment
+        </Boton>
+        <Boton name="servise" className={"buton-white"} client:load>
+          Learn more
+        </Boton>
+      </div>
+    </aside>
+    <aside>
+      <div class="imagen-corte">
+        <img src="/img/salon-corte.webp" alt="salonera haciendo corte" />
       </div>
     </aside>
   </Sections>
@@ -85,8 +109,8 @@ import Services from "../components/Services.astro";
     gap: 20px;
     padding: 12rem 0;
   }
-  .hero p {
-    color: #6B7280;
+  p {
+    color: #6b7280;
     font-size: 20px;
     margin: 8px 0 0;
     font-weight: 200;
@@ -99,6 +123,13 @@ import Services from "../components/Services.astro";
     border-radius: 5%;
     transition: transform 0.3s ease-in-out;
   }
+  .aside-about {
+    width: 40%;
+  }
+  .aside-about h2 {
+    font-weight: 900;
+  }
+
   .galery {
     display: grid;
     text-align: center;
@@ -111,7 +142,7 @@ import Services from "../components/Services.astro";
     grid-column: span 2; /* Spans across both columns */
     height: 400px; /* Adjust height as needed */
     width: 600px;
-    object-fit:cover ; /* Ensure image covers the entire area */
+    object-fit: cover; /* Ensure image covers the entire area */
   }
   h1 {
     font-size: 60px;
@@ -125,12 +156,11 @@ import Services from "../components/Services.astro";
     width: 100%;
     margin-top: 1rem;
   }
-  .header h2 {
+  h2 {
     font-size: 48px;
     font-weight: 200;
     margin: 8px 0 0;
     color: #09090b;
-   
   }
   .header small {
     text-align: end;
@@ -138,22 +168,21 @@ import Services from "../components/Services.astro";
     margin: 0;
     padding: 0;
   }
-  .header p{
-    color: #6B7280;
+  .header p {
+    color: #6b7280;
     font-weight: 300;
     font-size: 16px;
     text-wrap: wrap;
     margin: 8px 0 0;
   }
-  .body-seccion{
+  .body-seccion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     width: 800px;
     padding: 48px 0;
-   
   }
-  .imagen-corte img{
+  .imagen-corte img {
     width: 500px;
     height: 500px;
   }
