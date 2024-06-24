@@ -4,11 +4,13 @@ import Header from "../components/Header.astro";
 import Boton from "../components/Boton.jsx";
 import Sections from "../components/Sections.astro";
 import Services from "../components/Services.astro";
+import Modal from "../components/Modal.astro";
+let isTrue = true
 ---
-
 <Layout title="Bella Beauty Salon.">
   <Header />
   <main>
+    {!isTrue && <Modal />}
     <Sections>
       <aside class="hero">
         <div>
@@ -20,7 +22,8 @@ import Services from "../components/Services.astro";
               make you feel beautiful and confident.
             </p>
           </div>
-          <div class="butones">
+          <div class="butones" >
+            
             <Boton name="Book" className={"buton"} client:load>
               Book now
             </Boton>
@@ -73,7 +76,11 @@ import Services from "../components/Services.astro";
         <Boton name="Book" className={"buton"} client:load>
           Book an appointment
         </Boton>
-        <Boton name="servise" className={"buton-white"} client:load>
+        <Boton
+          name="servise"
+          className={"buton-white"}
+          client:load
+        >
           Learn more
         </Boton>
       </div>
