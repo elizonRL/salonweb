@@ -5,7 +5,7 @@ import Boton from "../components/Boton.jsx";
 import Sections from "../components/Sections.astro";
 import Services from "../components/Services.astro";
 import Modal from "../components/Modal.astro";
-let isTrue = true
+let isTrue = false
 ---
 <Layout title="Bella Beauty Salon.">
   <Header />
@@ -23,7 +23,6 @@ let isTrue = true
             </p>
           </div>
           <div class="butones" >
-            
             <Boton name="Book" className={"buton"} client:load>
               Book now
             </Boton>

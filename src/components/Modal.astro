@@ -1,10 +1,15 @@
 ---
 import LayoutModal from "../layouts/LayoutModal.astro";
+import Formservise from "./FormServise";
 ---
 
 <LayoutModal>
   <div class="modal-conten">
-    <h1>hello desde modal</h1>
+    <div class="header-modal">
+      <span class="close">&times;</span>
+      <h3>Choose your services</h3>
+    </div>
+    <Formservise />
   </div>
 </LayoutModal>
 
@@ -15,5 +20,17 @@ import LayoutModal from "../layouts/LayoutModal.astro";
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .header-modal h3{
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
   }
 </style>
